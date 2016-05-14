@@ -1,0 +1,16 @@
+---
+
+- name: add erlang solutions yum repo
+  yum_repository:
+    name: erlang_solutions
+    description: "Centos 6 - $basearch - Erlang Solutions"
+    baseurl: http://packages.erlang-solutions.com/rpm/centos/6/$basearch
+    gpgkey: http://packages.erlang-solutions.com/debian/erlang_solutions.asc
+    gpgcheck: no
+    enabled: true
+
+- name: install pkg
+  yum:
+    name: "{{erlang_pkg_name}}"
+    state: "{{erlang_pkg_state}}"
+

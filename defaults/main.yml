@@ -1,0 +1,5 @@
+---
+
+erlang_pkg_name: erlang
+erlang_pkg_state: present
+
